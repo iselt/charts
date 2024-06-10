@@ -5,10 +5,7 @@
         "healthy_error": null,
         "location": "/__w/charts/charts/community/radarr/1.2.13",
         "last_update": "2024-06-10 12:03:14",
-        "required_features": [
-            "normalize/acl",
-            "normalize/ixVolume"
-        ],
+        "required_features": ["normalize/acl", "normalize/ixVolume"],
         "human_version": "5.6.0.8846_1.2.13",
         "version": "1.2.13",
         "chart_metadata": {
@@ -43,10 +40,7 @@
                 "https://github.com/truenas/charts/tree/master/community/radarr",
                 "https://github.com/Radarr/Radarr"
             ],
-            "keywords": [
-                "media",
-                "movies"
-            ]
+            "keywords": ["media", "movies"]
         },
         "app_metadata": {
             "runAsContext": [
@@ -89,12 +83,8 @@
                     "protocols": [
                         "$kubernetes-resource_configmap_portal_protocol"
                     ],
-                    "host": [
-                        "$kubernetes-resource_configmap_portal_host"
-                    ],
-                    "ports": [
-                        "$kubernetes-resource_configmap_portal_port"
-                    ],
+                    "host": ["$kubernetes-resource_configmap_portal_host"],
+                    "ports": ["$kubernetes-resource_configmap_portal_port"],
                     "path": "$kubernetes-resource_configmap_portal_path"
                 }
             },
@@ -200,8 +190,8 @@
                                 "description": "The port for the Radarr Web UI.",
                                 "schema": {
                                     "type": "int",
-                                    "default": 30025,
-                                    "min": 9000,
+                                    "default": 7878,
+                                    "min": 7878,
                                     "max": 65535,
                                     "required": true
                                 }
@@ -260,15 +250,9 @@
                                             "schema": {
                                                 "type": "dict",
                                                 "show_if": [
-                                                    [
-                                                        "type",
-                                                        "=",
-                                                        "ixVolume"
-                                                    ]
+                                                    ["type", "=", "ixVolume"]
                                                 ],
-                                                "$ref": [
-                                                    "normalize/ixVolume"
-                                                ],
+                                                "$ref": ["normalize/ixVolume"],
                                                 "attrs": [
                                                     {
                                                         "variable": "aclEnable",
@@ -393,11 +377,7 @@
                                             "schema": {
                                                 "type": "dict",
                                                 "show_if": [
-                                                    [
-                                                        "type",
-                                                        "=",
-                                                        "hostPath"
-                                                    ]
+                                                    ["type", "=", "hostPath"]
                                                 ],
                                                 "attrs": [
                                                     {

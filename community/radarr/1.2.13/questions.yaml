@@ -91,8 +91,8 @@ questions:
           description: The port for the Radarr Web UI.
           schema:
             type: int
-            default: 30025
-            min: 9000
+            default: 7878
+            min: 7878
             max: 65535
             required: true
         - variable: hostNetwork
