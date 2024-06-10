@@ -91,8 +91,8 @@ questions:
           description: The port for the Sonarr Web UI.
           schema:
             type: int
-            default: 30027
-            min: 9000
+            default: 8989
+            min: 8989
             max: 65535
             required: true
         - variable: hostNetwork
